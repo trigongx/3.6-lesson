@@ -10,5 +10,6 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().add(R.id.container_1,TitleFragment()).commit()
         supportFragmentManager.beginTransaction().add(R.id.container_2,SongsFragment()).commit()
+
     }
 }

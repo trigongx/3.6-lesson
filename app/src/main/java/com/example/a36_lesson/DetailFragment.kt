@@ -23,6 +23,8 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         dataFromMainFragment = arguments?.getSerializable("key") as Song
         binding.tvDetailName.text =dataFromMainFragment.name
         binding.tvDetailArtist.text = dataFromMainFragment.artist

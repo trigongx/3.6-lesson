@@ -18,7 +18,7 @@ class SongsFragment : Fragment() {
         Song("https://f4.bcbits.com/img/a2829340549_10.jpg","21 question","50Cent","3:52")
         )
     private var bundle = Bundle()
-    private var fragment:DetailFragment = DetailFragment()
+    private var detailFragment:DetailFragment = DetailFragment()
 
 
     override fun onCreateView(
@@ -40,8 +40,8 @@ class SongsFragment : Fragment() {
     fun onClick(position:Int){
 
         bundle.putSerializable("key", songList[position])
-        fragment.arguments = bundle
-        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_container,DetailFragment()).addToBackStack(null).commit()
+        detailFragment.arguments = bundle
+        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_container,detailFragment).commit()
 
     }
 
