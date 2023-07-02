@@ -41,7 +41,7 @@ class SongsFragment : Fragment() {
 
         bundle.putSerializable("key", songList[position])
         detailFragment.arguments = bundle
-        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_container,detailFragment).commit()
+        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.detail_container,detailFragment).addToBackStack(null).commit()
 
     }
 
